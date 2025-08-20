@@ -13,6 +13,7 @@ load_dotenv()
 
 # Explicitly set API key in case it's not loaded properly
 api_key = os.getenv('GROQ_API_KEY')
+api_key = st.secrets["GROQ_API_KEY"]
 if not api_key:
     os.environ['GROQ_API_KEY'] = config.GROQ_API_KEY
 
